@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/scss/all.scss" />
+    <title>index</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <main class="py-4 d-flex justify-content-center bg-primary-500">
+      <section
+        class="cell-phone bg-camera camera-overlay d-flex flex-column justify-content-between"
+      >
+        <div>
+          <!-- 保留狀態列高度 -->
+          <div class="h-54"></div>
+          <!-- 標題 -->
+          <div class="position-relative z-3 d-flex flex-column">
+            <!-- 標題 -->
+            <div>
+              <div class="ps-6 pe-3 d-flex justify-content-between">
+                <!-- 標題 -->
+                <div class="py-2">
+                  <h2 class="mb-0 fs-5 text-white fw-bold">AI相機</h2>
+                </div>
+              </div>
+            </div>
+            <!-- 載入 -->
+            <div>
+              <div class="text-center mt-21">
+                <div class="mb-3 fs-5 fw-bold text-white" id="status-text">
+                  分析中...
+                </div>
+                <!-- 載入圈 -->
+                <div
+                  class="w-h-62 mx-auto text-white z-1"
+                  id="circle-container"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 載入 -->
+        <div class="h-21"></div>
+      </section>
+    </main>
+    <%- include('./layout/footer'); -%>
+
+    <script src="https://cdn.jsdelivr.net/npm/progressbar.js"></script>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>
